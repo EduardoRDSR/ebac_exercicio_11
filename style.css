@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+header{
+    padding: 16px;
+    margin-bottom: 56px;
+    background-color: purple;
+}
+
+header nav a{
+    color: #fff;
+    text-decoration: none;
+    padding: 16px;
+}
+
+.noticia{
+    display: flex;
+}
+
+.noticia img{
+    max-width: 100%;
+    
+}
+
+section > h2{
+    color: purple;
+    margin-bottom: 20px;
+}
+
+article div h2{
+    margin-bottom: 20px;
+}
+
+.sobre-loja {
+    margin-left: 30px;
+}
+
+.sobre-loja h2{
+    color: purple;
+}
+
+.sobre-loja p{
+    margin-top: 20px;
+}
+
+hr{
+    border: 1px solid purple;
+}
+
+.destaque{
+    margin-bottom: 56px;
+}
+
+.destaque .noticia a{
+    display: flex;
+    font-size: 2em;
+}
+
+.destaque .noticia img{
+    margin-right: 8px;
+}
+
+.noticias{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 24.5%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+button{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: purple;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor:pointer;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 640px) {
+    .noticia{
+        display: block;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+    .sobre-loja{
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    
+    .destaque .noticia img{
+        margin-right: 0px;
+    }
+
+    .noticias{
+        display: block;
+    }
+
+    .noticias .noticia{
+        margin-bottom: 32px;
+    }
+
+    header div.container{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:641px) and (max-width:1023px){
+    .container{
+        max-width: 90%;
+    }
+
+    .noticias{
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    .noticia{
+        display: block;
+    }
+
+    .sobre-loja{
+        margin-top: 30px;
+    }
+}
